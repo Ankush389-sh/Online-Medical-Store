@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Medicines - Pooja Medical</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Pooja Medical</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="order.html">Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="order-form-section">
+      <h2>Order Your Medicines</h2>
+      <form id="orderForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required pattern="[0-9]{10}" maxlength="10">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Delivery Address:</label>
+          <textarea id="address" required></textarea>
+        </div>
+
+        <div class="medicines-section">
+          <h3>Medicines List</h3>
+          <div id="medicineList">
+            <div class="medicine-item">
+              <input type="text" placeholder="Enter medicine name" required>
+              <button type="button" class="remove-med">Remove</button>
+            </div>
+          </div>
+          <button type="button" id="addMedicine" class="btn-secondary">+ Add More</button>
+        </div>
+
+        <div class="form-group">
+          <label>Payment Method:</label>
+          <div class="payment-options">
+            <label><input type="radio" name="payment" value="cod" checked> Cash on Delivery</label><br>
+            <label><input type="radio" name="payment" value="online"> Online Payment</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary">Place Order</button>
+      </form>
+
+      <div id="thankYouMessage" class="thank-you hidden">
+        <h2>Thank You! 🎉</h2>
+        <p>Your order has been placed successfully. We’ll contact you soon for confirmation.</p>
+        <a href="index.html" class="btn-secondary">Back to Home</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="about-us">
+      <h3>About Pooja Medical</h3>
+      <p>We ensure your medicines are delivered safely and quickly to your doorstep with genuine quality assurance.</p>
+    </div>
+    <p>&copy; 2025 Pooja Medical. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
